@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bill of Materials</title>
+<style>
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 13px;
+    color: #111;
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 0 24px;
+  }
+  .table-title {
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #999;
+  }
+  th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 8px 10px;
+    border: 1px solid #999;
+    text-align: center;
+  }
+  td {
+    padding: 7px 10px;
+    border: 1px solid #bbb;
+    vertical-align: top;
+  }
+  td:first-child {
+    text-align: center;
+    width: 80px;
+    font-weight: bold;
+  }
+  td:nth-child(2) {
+    width: 200px;
+  }
+  td ul {
+    margin: 0;
+    padding-left: 16px;
+  }
+  td ul li {
+    margin: 2px 0;
+    line-height: 1.5;
+  }
+  tr:nth-child(even) td {
+    background-color: #fafafa;
+  }
+</style>
+</head>
+<body>
+
+<p class="table-title">Table 1. &nbsp; Component List</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Component Number</th>
+      <th>Component</th>
+      <th>Role and Key Specifications</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Microcontroller: Arduino Nano ESP32</td>
+      <td><ul>
+        <li>ESP32-S3 dual-core Xtensa LX7 @ 240 MHz</li>
+        <li>512 KB SRAM, 16 MB flash, 8 MB PSRAM</li>
+        <li>Wi-Fi 802.11 b/g/n, Bluetooth LE 5.0</li>
+        <li>I2C, SPI, UART, 14 digital + 8 analog GPIO</li>
+        <li>3.3 V logic</li>
+        <li>USB-C</li>
+      </ul></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Sensor: DS18B20 Temperature Probe</td>
+      <td><ul>
+        <li>Measures temperature</li>
+        <li>1-Wire digital interface (single data pin, 4.7 k&#937; pull-up)</li>
+        <li>Range: &minus;55 to +125 &deg;C</li>
+        <li>Accuracy: &plusmn;0.5 &deg;C</li>
+        <li>Programmable 9&ndash;12-bit resolution (0.0625 &deg;C at 12-bit)</li>
+        <li>3.0&ndash;5.5 V</li>
+      </ul></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Sensor: GPS Module</td>
+      <td><ul>
+        <li>Measures latitude, longitude, altitude, speed, and UTC time</li>
+        <li>UART serial, default baud rate 9600 bps (adjustable)</li>
+        <li>Update rate 1 Hz (configurable)</li>
+        <li>3.6&ndash;5 V supply; active IPX ceramic patch antenna</li>
+        <li>Onboard EEPROM saves config; TinyGPS++ Arduino library</li>
+      </ul></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Receiver: FrSky X8R 2.4 GHz</td>
+      <td><ul>
+        <li>16-channel RC telemetry receiver</li>
+        <li>ACCST protocol</li>
+        <li>8 PWM outputs (CH1&ndash;CH8) + SBUS port (CH1&ndash;16)</li>
+        <li>Smart Port full-duplex telemetry</li>
+        <li>RSSI PWM output (0&ndash;3.3 V)</li>
+        <li>Operating voltage 4.0&ndash;10 V, 100 mA @ 5 V</li>
+        <li>Range: &gt;1.5 km</li>
+      </ul></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Transmitter: TX16S</td>
+      <td><ul>
+        <li>16-channel RC transmitter used for drone flight control</li>
+        <li>Sampler uses one toggle switch that outputs a PWM signal on channel 1</li>
+      </ul></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Electronic: SD Card Logger</td>
+      <td><ul>
+        <li>MicroSD card read/write for CSV data logging</li>
+        <li>SPI interface (MOSI, MISO, SCK, CS)</li>
+        <li>Onboard 3.3 V regulator and level shifter</li>
+        <li>Supports FAT16/FAT32; Arduino SD.h + SPI.h libraries</li>
+      </ul></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Actuator: HSR-2648CR</td>
+      <td><ul>
+        <li>Continuous-rotation digital servo (360&deg;)</li>
+        <li>Speed proportional to PWM deviation from 1500 &mu;s center (50 Hz)</li>
+        <li>Metal gears, dual ball bearings, 25T spline</li>
+        <li>Wide voltage 4.8&ndash;7.4 V; ~12 kg&middot;cm torque @ 7.4 V</li>
+      </ul></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Switch: IP68 Reed Switch</td>
+      <td><ul>
+        <li>Magnetically actuated normally-open (NO) switch</li>
+        <li>Closes in the presence of a magnetic field; digital GPIO input</li>
+        <li>Used for contactless position sensing</li>
+      </ul></td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Switch: IP68 Toggle Switch</td>
+      <td><ul>
+        <li>Manual on/off for device</li>
+      </ul></td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Power: 12.6 V 3-Cell Li-ion Battery</td>
+      <td><ul>
+        <li>5 A max; powers system independent from drone</li>
+      </ul></td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Power: 12V&ndash;5V Buck Converter</td>
+      <td><ul>
+        <li>Converts 12 V to 5 V at 3 A from the battery to the power rail</li>
+      </ul></td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Power: 8 A Fuse</td>
+      <td><ul>
+        <li>Compact glass fuse for circuit protection</li>
+      </ul></td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Fabrication: 3D Printed Parts</td>
+      <td><ul>
+        <li>White PETG used with Bambu Labs P1S and A1 Mini (FDM printer)</li>
+        <li>Sampler body and electronics bracket</li>
+        <li>0.1&ndash;0.2 mm tolerance</li>
+      </ul></td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
