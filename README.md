@@ -21,7 +21,7 @@ The primary firmware file is [`src/main_driver_v6.cpp`](src/main_driver_v6.cpp).
 ## Project Structure
 
 ```
-src/main.cpp        ← main firmware
+src/main_driver_v6.cpp        ← main firmware
 lib/                ← local libraries (ESP32Servo)
 docs/       ← issues and fixes log
 platformio.ini      ← board and port configuration
