@@ -4,7 +4,7 @@ The firmware runs on an Arduino Nano ESP32 (ESP32-S3), controlling alternating s
 
 ## Main Code
 
-The primary firmware file is [`src/main.cpp`](src/main.cpp).
+The primary firmware file is [`src/main_driver_v6.cpp`](src/main_driver_v6.cpp).
 
 ## Hardware
 
