@@ -23,7 +23,7 @@ The primary firmware file is [`src/main.cpp`](src/main.cpp).
 ```
 src/main.cpp        ← main firmware
 lib/                ← local libraries (ESP32Servo)
-docs/archive/       ← issues and fixes log
+docs/       ← issues and fixes log
 platformio.ini      ← board and port configuration
 ```
 

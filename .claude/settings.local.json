@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python scripts/monitor.py COM12 115200 --timeout 10)",
+      "Bash(python scripts/monitor.py COM12 9600 --timeout 10)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Elecrow-RD/CrowPanel-ESP32-2.13-E-paper-HMI-Display-with-122-250/master/example/arduino/libraries/EPD/src/DEV_Config.h\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Elecrow-RD/CrowPanel-ESP32-2.13-E-paper-HMI-Display-with-122-250/master/example/arduino/libraries/EPD/src/DEV_Config.cpp\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Elecrow-RD/CrowPanel-ESP32-2.13-E-paper-HMI-Display-with-122-250/master/example/arduino/libraries/EPD/src/GUI_Paint.h\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Elecrow-RD/CrowPanel-ESP32-2.13-E-paper-HMI-Display-with-122-250/master/example/arduino/libraries/EPD/src/EPD.h\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Elecrow-RD/CrowPanel-ESP32-2.13-E-paper-HMI-Display-with-122-250/master/example/arduino/libraries/EPD/src/utility/EPD_2in13_V4.h\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Elecrow-RD/CrowPanel-ESP32-2.13-E-paper-HMI-Display-with-122-250/master/example/arduino/libraries/EPD/src/utility/EPD_2in13_V4.cpp\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Elecrow-RD/CrowPanel-ESP32-2.13-E-paper-HMI-Display-with-122-250/master/example/arduino/libraries/EPD/src/fonts.h\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Elecrow-RD/CrowPanel-ESP32-2.13-E-paper-HMI-Display-with-122-250/master/example/arduino/libraries/EPD/src/Debug.h\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Elecrow-RD/CrowPanel-ESP32-2.13-E-paper-HMI-Display-with-122-250/master/example/arduino/libraries/EPD/src/SPI_RAM.h\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Elecrow-RD/CrowPanel-ESP32-2.13-E-paper-HMI-Display-with-122-250/master/example/arduino/libraries/EPD/src/GUI_Paint.cpp\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Elecrow-RD/CrowPanel-ESP32-2.13-E-paper-HMI-Display-with-122-250/master/example/arduino/libraries/EPD/src/SPI_RAM.cpp\")"
+    ]
+  }
+}
