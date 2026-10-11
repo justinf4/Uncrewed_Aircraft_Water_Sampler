@@ -12,11 +12,11 @@ The primary firmware file is [`src/main_driver_v6.cpp`](src/main_driver_v6.cpp).
 |---|---|
 | Microcontroller | Arduino Nano ESP32 (ESP32-S3) |
 | RC Receiver | FrSky X8R 2.4 GHz |
-| Servos | Two alternating servos (D5, D9) |
-| Position Sensor | Magnetic reed switch (D2) |
-| Temperature | 2x DS18B20 one-wire sensors (D8) |
-| GPS | UART GPS module — TinyGPS+ (D3/D4) |
-| Storage | SD card over SPI (D10–D13) |
+| Servos | Two alternating servo pairs |
+| Position Sensor | Magnetic reed switches |
+| Temperature | 2x DS18B20 one-wire sensors  |
+| GPS | UART GPS module — TinyGPS+  |
+| Storage | SD card over SPI  |
 
 ## Project Structure
 
